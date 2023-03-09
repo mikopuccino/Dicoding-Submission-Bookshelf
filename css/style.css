@@ -89,33 +89,7 @@ header ul li a:hover::after {
 .home {
   background-image: url("../img/book\ cover\ 1.jpg");
 }
-.addBook {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  min-width: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1rem;
-}
-.addBook h2 {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
-  color: #1b1e49;
-}
-.addBook #inputBook {
-  position: relative;
-  width: 350px;
-}
-.input {
-  display: flex;
-  gap: 1rem;
-}
-/* .addBook,
+.addBook,
 .editBook {
   padding: 2rem;
   min-width: 500px;
@@ -187,7 +161,7 @@ header ul li a:hover::after {
 }
 .input_inline {
   margin-left: 20px;
-} */
+}
 .btnbookSubmit {
   width: fit-content;
   font-family: "Roboto", sans-serif;

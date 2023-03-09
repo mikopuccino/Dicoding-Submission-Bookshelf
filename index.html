@@ -33,24 +33,44 @@
         <h2>Masukkan Buku Baru</h2>
         <form id="inputBook">
           <div class="input">
-            <input type="text" required />
-            <span>Title</span>
-            <i></i>
+            <label for="bookTitle">Judul</label>
+            <input
+              name="bookTitle"
+              id="bookTitle"
+              type="text"
+              required
+              placeholder="ex: The Lord of The Rings"
+            />
           </div>
           <div class="input">
-            <input type="text" required />
-            <span>Author</span>
-            <i></i>
+            <label for="bookAuthor">Pengarang</label>
+            <input
+              name="bookAuthor"
+              id="bookAuthor"
+              type="text"
+              required
+              placeholder="ex: J.R.R Tolkien"
+            />
           </div>
           <div class="input">
-            <input type="text" required />
-            <span>Year</span>
-            <i></i>
+            <label for="bookYear">Tahun Terbit</label>
+            <input
+              name="bookYear"
+              id="bookYear"
+              type="number"
+              required
+              placeholder="ex: 1954"
+            />
           </div>
           <div class="input">
-            <input type="text" required />
-            <span>Cover Url</span>
-            <i></i>
+            <label for="bookImage">Cover Buku</label>
+            <input
+              name="bookImage"
+              id="bookImage"
+              type="text"
+              required
+              placeholder="ex: https://penakata.com/wp-content/uploads/2019/03/images-6-2.jpg"
+            />
           </div>
           <div class="input_inline">
             <input name="bookIsComplete" id="bookIsComplete" type="checkbox" />
