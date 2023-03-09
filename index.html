@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/25ef3f3e06.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="headercontainer">
+        <a href="#" class="logo">BookShelf.</a>
+        <div class="nav-menu">
+          <ul class="navigation">
+            <li><a href="#home">Add Books</a></li>
+            <li><a href="#completed">Completed</a></li>
+            <li><a href="#uncompleted">Uncompleted</a></li>
+          </ul>
+        </div>
+        <div class="menu-btn">
+          <i class="fas fa-bars" id="toggle-btn"></i>
+        </div>
+      </div>
+    </header>
+    <section class="home" id="home">
+      <div class="addBook">
+        <h2>Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <input type="text" required />
+            <span>Title</span>
+            <i></i>
+          </div>
+          <div class="input">
+            <input type="text" required />
+            <span>Author</span>
+            <i></i>
+          </div>
+          <div class="input">
+            <input type="text" required />
+            <span>Year</span>
+            <i></i>
+          </div>
+          <div class="input">
+            <input type="text" required />
+            <span>Cover Url</span>
+            <i></i>
+          </div>
+          <div class="input_inline">
+            <input name="bookIsComplete" id="bookIsComplete" type="checkbox" />
+            <label for="bookIsComplete">Read</label>
+          </div>
+          <button class="btnbookSubmit" id="bookSubmit" type="submit">
+            Add to <span>unread bookshelf</span>
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="search_section">
+      <h2>Search Judul Buku</h2>
+      <form id="searchBook">
+        <input id="searchBookTitle" name="searchBookTitle" type="text" />
+        <button id="searchSubmit" type="submit">
+          <i
+            class="fa-solid fa-magnifying-glass"
+            style="font-size: 2rem; color: #1b1e49"
+          ></i>
+        </button>
+      </form>
+    </section>
+    <section class="completed" id="completed">
+      <h2>Daftar Buku yang sudah dibaca</h2>
+      <div class="completedCon">
+        <div class="bookPanel" id="booksCompleted"></div>
+      </div>
+    </section>
+    <section class="uncompleted" id="uncompleted">
+      <h2>Daftar Buku yang belum selesai dibaca</h2>
+      <div class="uncompletedCon">
+        <div class="bookPanel" id="booksUnCompleted"></div>
+      </div>
+    </section>
+    <div class="editBookdiv" id="editBookdiv">
+      <div class="editBook">
+        <h2>Edit Buku</h2>
+        <form id="inputBook">
+          <div class="edit">
+            <label for="editbookTitle">Judul</label>
+            <input
+              name="editbookTitle"
+              id="editbookTitle"
+              type="text"
+              required
+            />
+          </div>
+          <div class="edit">
+            <label for="editbookAuthor">Pengarang</label>
+            <input
+              name="editbookAuthor"
+              id="editbookAuthor"
+              type="text"
+              required
+            />
+          </div>
+          <div class="edit">
+            <label for="editbookYear">Tahun Terbit</label>
+            <input
+              name="editbookYear"
+              id="editbookYear"
+              type="number"
+              required
+            />
+          </div>
+          <div class="edit">
+            <label for="editbookImage">Cover Buku</label>
+            <input
+              name="editbookImage"
+              id="editbookImage"
+              type="text"
+              required
+            />
+          </div>
+          <div class="input_inline">
+            <label for="editbookIsComplete">Read</label>
+            <input
+              name="editbookIsComplete"
+              id="editbookIsComplete"
+              type="checkbox"
+            />
+          </div>
+          <div class="btndiv">
+            <button id="editbookSubmit" type="editsubmit" class="editBtnSave">
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <p>
+          Copyright &copy; 2023
+          <span style="color: #1b1e49">Ahmad Fadhil</span> . All rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

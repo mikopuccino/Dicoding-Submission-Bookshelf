@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Quicksand:wght@500;700&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background: #f8f7f7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  background-color: #ff1e00;
+}
+.headercontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1280px;
+  margin-inline: auto;
+}
+.logo {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 0.5rem;
+  letter-spacing: 0.1em;
+  color: #1b1e49;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+  gap: 40px;
+}
+.menu-btn {
+  color: #1b1e49;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+header ul {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+header ul li {
+  list-style: none;
+}
+header ul li a {
+  color: #1b1e49;
+  position: relative;
+  font-size: 1.3em;
+  font-family: "Roboto", sans-serif;
+}
+header ul li a::after {
+  content: "";
+  position: absolute;
+  background-color: #e9e9ec;
+  height: 2px;
+  width: 0;
+  bottom: -5px;
+  left: 0px;
+  transition: 0.3s;
+}
+header ul li a:hover::after {
+  width: 100%;
+}
+.home,
+.completed,
+.uncompleted {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  background-color: #e9e9ec;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  margin-inline: auto;
+  padding: 4rem;
+  align-items: center;
+}
+.home {
+  background-image: url("../img/book\ cover\ 1.jpg");
+}
+.addBook {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.addBook h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: #1b1e49;
+}
+.addBook #inputBook {
+  position: relative;
+  width: 350px;
+}
+.input {
+  display: flex;
+  gap: 1rem;
+}
+/* .addBook,
+.editBook {
+  padding: 2rem;
+  min-width: 500px;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.editBookdiv {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #202124;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.editBookdiv.active {
+  display: flex;
+}
+.editBook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  width: 550px;
+  background-color: #ffffff;
+  margin-top: 7rem;
+}
+.addBook h2,
+.editBook h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: #1b1e49;
+  padding-top: 1.5rem;
+}
+.addBook #inputBook,
+.editBook #inputBook {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.editBook #inputBook {
+  width: 30rem;
+}
+.input,
+.edit {
+  position: relative;
+  width: 90%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.input label,
+.edit label {
+  color: #1b1e49;
+  font-family: "Roboto", sans-serif;
+}
+.input input,
+.edit input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #1b1e49;
+  border-radius: 6px;
+  outline: none;
+}
+.input_inline {
+  margin-left: 20px;
+} */
+.btnbookSubmit {
+  width: fit-content;
+  font-family: "Roboto", sans-serif;
+  border-radius: 16px;
+  padding: 12px 24px;
+  color: #ffffff;
+  background: #1b1e49;
+  border: none;
+  font-size: 20px;
+  margin-top: auto;
+  align-self: center;
+  cursor: pointer;
+}
+.btnbookSubmit:hover {
+  background: #ff1e00;
+  color: #1b1e49;
+  border: none;
+}
+.btndiv {
+  margin: 30px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+.editBtnSave {
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #1b1e49;
+  border: none;
+}
+.editBtnSave:hover {
+  background: #ff1e00;
+  color: #1b1e49;
+}
+.search_section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+  margin-inline: auto;
+  background-color: #ff1e00;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  gap: 1rem;
+}
+.search_section h2 {
+  color: #1b1e49;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+#searchBook {
+  display: flex;
+  cursor: pointer;
+  background-color: #ffffff;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  height: 3rem;
+}
+#searchBook input {
+  outline: none;
+  border: none;
+  width: 30rem;
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+#searchBook button {
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.completed,
+.uncompleted {
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+.completed h2,
+.uncompleted h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #1b1e49;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 1rem;
+}
+.completedCon,
+.uncompletedCon {
+  color: #ff1e00;
+  padding-top: 1.5rem;
+  display: flex;
+}
+.bookPanel {
+  display: flex;
+  border-radius: 10px;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.bookList {
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 25rem;
+}
+.cover {
+  margin-top: -30px;
+}
+.description {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cover img {
+  padding: 10px;
+  width: 150px;
+}
+.description h3 {
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+.description p {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-transform: capitalize;
+}
+.actionButton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 8rem;
+}
+.moveButton,
+.trashButton,
+.editButton {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  width: 6rem;
+  height: 1.5rem;
+  border-radius: 7px;
+  color: #ffffff;
+  background: #1b1e49;
+  border: none;
+}
+.moveButton:hover,
+.trashButton:hover,
+.editButton:hover {
+  background: #ff1e00;
+  color: #1b1e49;
+  border: none;
+}
+footer .footer-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff1e00;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+}
+footer .footer-container p {
+  color: #ffffff;
+  font-weight: bold;
+}
+@media screen and (max-width: 1024px) {
+  .logo {
+    margin-left: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+  .logo {
+    margin-left: 2rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  html {
+    font-size: 70%;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #f8f7f7;
+    height: 100vh;
+    width: 15rem;
+    transition: 0.2s;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+  .menu-btn {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  .navigation {
+    display: block;
+    color: #1b1e49;
+    font-size: 1.3rem;
+    margin: 0 2rem;
+    position: absolute;
+    top: 0;
+  }
+  .navigation li {
+    margin: 3rem 0;
+  }
+  .navigation li a::after {
+    background-color: #ff1e00;
+  }
+  .logo {
+    margin-left: 2rem;
+  }
+  .addBook {
+    min-width: 350px;
+  }
+}
